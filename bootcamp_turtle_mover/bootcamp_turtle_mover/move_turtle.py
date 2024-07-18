@@ -1,36 +1,52 @@
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
+from turtlesim.msg import Pose
+import math
 import random
 
 class TurtleController(Node):
     def __init__(self):
         super().__init__('turtle_controller')
         self.publisher = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
-        self.timer = self.create_timer(10.0, self.move_turtle)
-        self.x, self.y, self.theta = 5.5, 5.5, 0 # Initial rough center position
-    
+        self.pose_subscription = self.create_subscription(
+            Pose,
+            '/turtle1/pose',
+            self.update_pose,
+            10)
+        self.pose = Pose()
+        self.timer = self.create_timer(0.1, self.move_turtle)
+        self.goal_x = random.uniform(0, 11)
+        self.goal_y = random.uniform(0, 11)
+        self.goal_theta = random.uniform(-3.14, 3.14)
+        self.reached_goal = False
+
+    def update_pose(self, msg):
+        self.pose = msg
+
     def move_turtle(self):
-        # Generate random goal position and orientation
-        goal_x = random.uniform(0, 11) # Turtlesim boundaries for x
-        goal_y = random.uniform(0, 11) # Turtlesim boundaries for y
-        goal_theta = random.uniform(-3.14, 3.14) # Full range of orientation
+        if self.reached_goal:
+            self.goal_x = random.uniform(0, 11)
+            self.goal_y = random.uniform(0, 11)
+            self.goal_theta = random.uniform(-3.14, 3.14)
+            self.reached_goal = False
+            self.get_logger().info(f'New goal: x={self.goal_x}, y={self.goal_y}, theta={self.goal_theta}')
+            self.get_logger().info(f'Reached goal: x={self.goal_x}, y={self.goal_y}, theta={self.goal_theta}')
+        distance = math.sqrt((self.goal_x - self.pose.x) ** 2 + (self.goal_y - self.pose.y) ** 2)
+        angle_to_goal = math.atan2(self.goal_y - self.pose.y, self.goal_x - self.pose.x)
+        angle_difference = angle_to_goal - self.pose.theta
 
-        # Log the new goal
-        self.get_logger().info(f'New goal: x={goal_x}, y={goal_y}, theta={goal_theta}')
-
-        # Calculate the required movement to reach the goal
         move_cmd = Twist()
-        # Simple proportional control
-        move_cmd.linear.x = 0.5 * ((goal_x - self.x)**2 + (goal_y - self.y)**2)**0.5
-        move_cmd.angular.z = 2 * (goal_theta - self.theta)
+        if distance > 0.1:
+            move_cmd.linear.x = 1.5 * distance
+            move_cmd.angular.z = 6 * angle_difference
+        else:
+            move_cmd.linear.x = 0.0
+            move_cmd.angular.z = 1.5 * (self.goal_theta - self.pose.theta)
 
-        # Update current position roughtly
-        self.x = goal_x
-        self.y = goal_y
-        self.theta = goal_theta
+            if abs(self.goal_theta - self.pose.theta) < 0.1:
+                self.reached_goal = True
 
-        # Publish the move command
         self.publisher.publish(move_cmd)
 
 def main(args=None):

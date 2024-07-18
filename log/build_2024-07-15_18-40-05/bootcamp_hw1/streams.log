@@ -1,0 +1,41 @@
+[4.840s] Invoking command in '/home/jimmy/ros2_ws/src/bootcamp_hw1': PYTHONPATH=/home/jimmy/ros2_ws/src/build/bootcamp_hw1/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jimmy/ros2_ws/src/install/bootcamp_hw1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/bootcamp_hw1 build --build-base /home/jimmy/ros2_ws/src/build/bootcamp_hw1/build install --record /home/jimmy/ros2_ws/src/build/bootcamp_hw1/install.log --single-version-externally-managed install_data
+[5.441s] running egg_info
+[5.442s] creating ../build/bootcamp_hw1/bootcamp_hw1.egg-info
+[5.442s] writing ../build/bootcamp_hw1/bootcamp_hw1.egg-info/PKG-INFO
+[5.443s] writing dependency_links to ../build/bootcamp_hw1/bootcamp_hw1.egg-info/dependency_links.txt
+[5.443s] writing entry points to ../build/bootcamp_hw1/bootcamp_hw1.egg-info/entry_points.txt
+[5.444s] writing requirements to ../build/bootcamp_hw1/bootcamp_hw1.egg-info/requires.txt
+[5.444s] writing top-level names to ../build/bootcamp_hw1/bootcamp_hw1.egg-info/top_level.txt
+[5.446s] writing manifest file '../build/bootcamp_hw1/bootcamp_hw1.egg-info/SOURCES.txt'
+[5.461s] reading manifest file '../build/bootcamp_hw1/bootcamp_hw1.egg-info/SOURCES.txt'
+[5.465s] writing manifest file '../build/bootcamp_hw1/bootcamp_hw1.egg-info/SOURCES.txt'
+[5.466s] running build
+[5.466s] running build_py
+[5.467s] creating /home/jimmy/ros2_ws/src/build/bootcamp_hw1/build
+[5.467s] creating /home/jimmy/ros2_ws/src/build/bootcamp_hw1/build/lib
+[5.467s] creating /home/jimmy/ros2_ws/src/build/bootcamp_hw1/build/lib/bootcamp_hw1
+[5.467s] copying bootcamp_hw1/subscriber.py -> /home/jimmy/ros2_ws/src/build/bootcamp_hw1/build/lib/bootcamp_hw1
+[5.521s] copying bootcamp_hw1/__init__.py -> /home/jimmy/ros2_ws/src/build/bootcamp_hw1/build/lib/bootcamp_hw1
+[5.521s] copying bootcamp_hw1/publisher.py -> /home/jimmy/ros2_ws/src/build/bootcamp_hw1/build/lib/bootcamp_hw1
+[5.529s] running install
+[5.529s] running install_lib
+[5.530s] creating /home/jimmy/ros2_ws/src/install/bootcamp_hw1/lib/python3.10/site-packages/bootcamp_hw1
+[5.531s] copying /home/jimmy/ros2_ws/src/build/bootcamp_hw1/build/lib/bootcamp_hw1/subscriber.py -> /home/jimmy/ros2_ws/src/install/bootcamp_hw1/lib/python3.10/site-packages/bootcamp_hw1
+[5.531s] copying /home/jimmy/ros2_ws/src/build/bootcamp_hw1/build/lib/bootcamp_hw1/__init__.py -> /home/jimmy/ros2_ws/src/install/bootcamp_hw1/lib/python3.10/site-packages/bootcamp_hw1
+[5.531s] copying /home/jimmy/ros2_ws/src/build/bootcamp_hw1/build/lib/bootcamp_hw1/publisher.py -> /home/jimmy/ros2_ws/src/install/bootcamp_hw1/lib/python3.10/site-packages/bootcamp_hw1
+[5.532s] byte-compiling /home/jimmy/ros2_ws/src/install/bootcamp_hw1/lib/python3.10/site-packages/bootcamp_hw1/subscriber.py to subscriber.cpython-310.pyc
+[5.533s] byte-compiling /home/jimmy/ros2_ws/src/install/bootcamp_hw1/lib/python3.10/site-packages/bootcamp_hw1/__init__.py to __init__.cpython-310.pyc
+[5.533s] byte-compiling /home/jimmy/ros2_ws/src/install/bootcamp_hw1/lib/python3.10/site-packages/bootcamp_hw1/publisher.py to publisher.cpython-310.pyc
+[5.554s] running install_data
+[5.554s] creating /home/jimmy/ros2_ws/src/install/bootcamp_hw1/share/ament_index
+[5.554s] creating /home/jimmy/ros2_ws/src/install/bootcamp_hw1/share/ament_index/resource_index
+[5.554s] creating /home/jimmy/ros2_ws/src/install/bootcamp_hw1/share/ament_index/resource_index/packages
+[5.555s] copying resource/bootcamp_hw1 -> /home/jimmy/ros2_ws/src/install/bootcamp_hw1/share/ament_index/resource_index/packages
+[5.555s] copying package.xml -> /home/jimmy/ros2_ws/src/install/bootcamp_hw1/share/bootcamp_hw1
+[5.555s] running install_egg_info
+[5.555s] Copying ../build/bootcamp_hw1/bootcamp_hw1.egg-info to /home/jimmy/ros2_ws/src/install/bootcamp_hw1/lib/python3.10/site-packages/bootcamp_hw1-0.0.0-py3.10.egg-info
+[5.555s] running install_scripts
+[5.606s] Installing publisher script to /home/jimmy/ros2_ws/src/install/bootcamp_hw1/lib/bootcamp_hw1
+[5.606s] Installing subscriber script to /home/jimmy/ros2_ws/src/install/bootcamp_hw1/lib/bootcamp_hw1
+[5.606s] writing list of installed files to '/home/jimmy/ros2_ws/src/build/bootcamp_hw1/install.log'
+[5.750s] Invoked command in '/home/jimmy/ros2_ws/src/bootcamp_hw1' returned '0': PYTHONPATH=/home/jimmy/ros2_ws/src/build/bootcamp_hw1/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jimmy/ros2_ws/src/install/bootcamp_hw1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/bootcamp_hw1 build --build-base /home/jimmy/ros2_ws/src/build/bootcamp_hw1/build install --record /home/jimmy/ros2_ws/src/build/bootcamp_hw1/install.log --single-version-externally-managed install_data

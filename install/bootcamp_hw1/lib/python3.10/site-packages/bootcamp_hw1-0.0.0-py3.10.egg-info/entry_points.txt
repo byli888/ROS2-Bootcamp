@@ -1,0 +1,4 @@
+[console_scripts]
+publisher = bootcamp_hw1.publisher:main
+subscriber = bootcamp_hw1.subscriber:main
+

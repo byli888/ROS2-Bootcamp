@@ -1,0 +1,20 @@
+running egg_info
+writing ../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info/PKG-INFO
+writing dependency_links to ../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info/dependency_links.txt
+writing entry points to ../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info/entry_points.txt
+writing requirements to ../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info/requires.txt
+writing top-level names to ../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info/top_level.txt
+reading manifest file '../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages/bootcamp_turtlesim_vacuum_cleaner-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info to /home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages/bootcamp_turtlesim_vacuum_cleaner-0.0.0-py3.10.egg-info
+running install_scripts
+Installing vacuum_cleaner script to /home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/bootcamp_turtlesim_vacuum_cleaner
+writing list of installed files to '/home/jimmy/ros2_ws/src/build/bootcamp_turtlesim_vacuum_cleaner/install.log'

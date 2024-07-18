@@ -1,0 +1,3 @@
+[console_scripts]
+vacuum_cleaner = bootcamp_turtlesim_vacuum_cleaner.vacuum_cleaner:main
+

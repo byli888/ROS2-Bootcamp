@@ -1,0 +1,22 @@
+[4.911s] Invoking command in '/home/jimmy/ros2_ws/src/bootcamp_turtlesim_vacuum_cleaner': PYTHONPATH=/home/jimmy/ros2_ws/src/build/bootcamp_turtlesim_vacuum_cleaner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/bootcamp_turtlesim_vacuum_cleaner build --build-base /home/jimmy/ros2_ws/src/build/bootcamp_turtlesim_vacuum_cleaner/build install --record /home/jimmy/ros2_ws/src/build/bootcamp_turtlesim_vacuum_cleaner/install.log --single-version-externally-managed install_data
+[5.643s] running egg_info
+[5.644s] writing ../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info/PKG-INFO
+[5.645s] writing dependency_links to ../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info/dependency_links.txt
+[5.645s] writing entry points to ../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info/entry_points.txt
+[5.659s] writing requirements to ../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info/requires.txt
+[5.659s] writing top-level names to ../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info/top_level.txt
+[5.659s] reading manifest file '../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info/SOURCES.txt'
+[5.659s] adding license file 'LICENSE'
+[5.659s] writing manifest file '../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info/SOURCES.txt'
+[5.660s] running build
+[5.660s] running build_py
+[5.692s] running install
+[5.692s] running install_lib
+[5.723s] running install_data
+[5.743s] running install_egg_info
+[5.759s] removing '/home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages/bootcamp_turtlesim_vacuum_cleaner-0.0.0-py3.10.egg-info' (and everything under it)
+[5.759s] Copying ../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info to /home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages/bootcamp_turtlesim_vacuum_cleaner-0.0.0-py3.10.egg-info
+[5.768s] running install_scripts
+[5.820s] Installing vacuum_cleaner script to /home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/bootcamp_turtlesim_vacuum_cleaner
+[5.829s] writing list of installed files to '/home/jimmy/ros2_ws/src/build/bootcamp_turtlesim_vacuum_cleaner/install.log'
+[5.896s] Invoked command in '/home/jimmy/ros2_ws/src/bootcamp_turtlesim_vacuum_cleaner' returned '0': PYTHONPATH=/home/jimmy/ros2_ws/src/build/bootcamp_turtlesim_vacuum_cleaner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/bootcamp_turtlesim_vacuum_cleaner build --build-base /home/jimmy/ros2_ws/src/build/bootcamp_turtlesim_vacuum_cleaner/build install --record /home/jimmy/ros2_ws/src/build/bootcamp_turtlesim_vacuum_cleaner/install.log --single-version-externally-managed install_data
