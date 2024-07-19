@@ -7,14 +7,14 @@ from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     # Paths to the RViz configuration and URDF files
-    package_dir = get_package_share_directory('bootcamp_turtlesim_vacuum_cleaner')
-    rviz_config_path = os.path.join(package_dir, 'rviz', 'turtlebot3_config.rviz')
+    rviz_config_path = '/home/jimmy/ros2_ws/ROS2-Bootcamp/bootcamp_turtlesim_vacuum_cleaner/rviz/turtlebot3_config.rviz'
     urdf_file_name = 'turtlebot3_burger.urdf'
-    urdf = os.path.join(get_package_share_directory('turtlebot3_description'), 'urdf', urdf_file_name)
+    urdf_path = os.path.join(get_package_share_directory('turtlebot3_description'), 'urdf', urdf_file_name)
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
 
-    print(f"RViz config path: {rviz_config_path}")
-    print(f"URDF file: {urdf}")
+    # Read URDF file content
+    with open(urdf_path, 'r') as urdf_file:
+        robot_description = urdf_file.read()
 
     return LaunchDescription([
         SetEnvironmentVariable('TURTLEBOT3_MODEL', 'burger'),
@@ -23,7 +23,7 @@ def generate_launch_description():
             executable='robot_state_publisher',
             name='robot_state_publisher',
             output='screen',
-            parameters=[{'use_sim_time': use_sim_time, 'robot_description': urdf}],
+            parameters=[{'use_sim_time': use_sim_time, 'robot_description': robot_description}],
         ),
         Node(
             package='rviz2',
@@ -41,4 +41,3 @@ def generate_launch_description():
             output='screen',
         ),
     ])
-

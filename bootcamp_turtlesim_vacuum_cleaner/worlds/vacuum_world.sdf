@@ -7,16 +7,11 @@
     <include>
       <uri>model://sun</uri>
     </include>
-    <include>
-      <uri>model://turtlebot3_burger</uri>
-      <pose>0 0 0.1 0 0 0</pose>
-    </include>
     <gui>
       <camera name="user_camera">
         <projection_type>orthographic</projection_type>
-        <pose>15.302055 -13.169839 10.579707 -0.000001 0.275643 2.356194</pose> <!-- Updated pose -->
+        <pose>11.421280 -12.353131 12.698881 -0.000001 0.651644 2.272192</pose> <!-- Updated pose -->
       </camera>
     </gui>
   </world>
 </sdf>
-

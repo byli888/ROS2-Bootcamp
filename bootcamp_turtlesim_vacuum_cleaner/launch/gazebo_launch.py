@@ -8,11 +8,13 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     package_dir = get_package_share_directory('bootcamp_turtlesim_vacuum_cleaner')
-    world_path = os.path.join(package_dir, 'worlds', 'vacuum_world.sdf')
+    #world_path = os.path.join(package_dir, 'worlds', 'vacuum_world.sdf')
+    world_path = '/home/jimmy/ros2_ws/ROS2-Bootcamp/bootcamp_turtlesim_vacuum_cleaner/worlds/vacuum_world.sdf'
     turtlebot3_model_path = '/opt/ros/humble/share/turtlebot3_gazebo/models'
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
 
     return LaunchDescription([
+        SetEnvironmentVariable('TURTLEBOT3_MODEL', 'burger'),
         SetEnvironmentVariable('GAZEBO_MODEL_PATH', f"{turtlebot3_model_path}:${{GAZEBO_MODEL_PATH}}"),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([os.path.join(
@@ -20,11 +22,28 @@ def generate_launch_description():
             )]),
             launch_arguments={'world': world_path}.items(),
         ),
+                # Include the Gazebo client launch file
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([os.path.join(
-                get_package_share_directory('turtlebot3_gazebo'), 'launch', 'turtlebot3_world.launch.py'
-            )]),
-            launch_arguments={'use_sim_time': use_sim_time}.items()
+                get_package_share_directory('gazebo_ros'), 'launch', 'gzclient.launch.py'
+            )])
+        ),
+         Node(
+            package='gazebo_ros',
+            executable='spawn_entity.py',
+            arguments=[
+                '-entity', 'turtlebot3_burger',
+                '-file', os.path.join(
+                    get_package_share_directory('turtlebot3_gazebo'), 'models', 'turtlebot3_burger', 'model.sdf'
+                ),
+                '-x', '0.0',
+                '-y', '0.0',
+                '-z', '0.0',
+                '-R', '0.0',
+                '-P', '0.0',
+                '-Y', '0.0'
+            ],
+            output='screen'
         ),
         Node(
             package='bootcamp_turtlesim_vacuum_cleaner',

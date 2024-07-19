@@ -28,7 +28,7 @@ class VacuumCleaner(Node):
         self.get_logger().info(f'Moving TurtleBot. Current pose: x={x}, y={y}')
 
         # Check if the TurtleBot hits the boundary or the radius is larger than 11
-        if x <= -5.25 or x >= 5.25 or y <= -5.25 or y >= 5.25 or self.spiral_param > 11:
+        if self.spiral_param > 11:
             twist.linear.x = 0.0
             twist.angular.z = 0.0
             self.publisher_.publish(twist)
