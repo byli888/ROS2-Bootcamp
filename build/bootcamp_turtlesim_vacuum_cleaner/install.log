@@ -1,9 +1,16 @@
 /home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages/bootcamp_turtlesim_vacuum_cleaner/__init__.py
+/home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages/bootcamp_turtlesim_vacuum_cleaner/vacuum_cleaner_turtlebot.py
 /home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages/bootcamp_turtlesim_vacuum_cleaner/vacuum_cleaner.py
 /home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages/bootcamp_turtlesim_vacuum_cleaner/__pycache__/__init__.cpython-310.pyc
+/home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages/bootcamp_turtlesim_vacuum_cleaner/__pycache__/vacuum_cleaner_turtlebot.cpython-310.pyc
 /home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages/bootcamp_turtlesim_vacuum_cleaner/__pycache__/vacuum_cleaner.cpython-310.pyc
 /home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/share/ament_index/resource_index/packages/bootcamp_turtlesim_vacuum_cleaner
 /home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/share/bootcamp_turtlesim_vacuum_cleaner/package.xml
+/home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/share/bootcamp_turtlesim_vacuum_cleaner/launch/combined_launch.py
+/home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/share/bootcamp_turtlesim_vacuum_cleaner/launch/rviz_launch.py
+/home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/share/bootcamp_turtlesim_vacuum_cleaner/launch/2.py
+/home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/share/bootcamp_turtlesim_vacuum_cleaner/launch/gazebo_launch.py
+/home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/share/bootcamp_turtlesim_vacuum_cleaner/worlds
 /home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages/bootcamp_turtlesim_vacuum_cleaner-0.0.0-py3.10.egg-info/dependency_links.txt
 /home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages/bootcamp_turtlesim_vacuum_cleaner-0.0.0-py3.10.egg-info/SOURCES.txt
 /home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages/bootcamp_turtlesim_vacuum_cleaner-0.0.0-py3.10.egg-info/PKG-INFO
@@ -11,4 +18,4 @@
 /home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages/bootcamp_turtlesim_vacuum_cleaner-0.0.0-py3.10.egg-info/top_level.txt
 /home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages/bootcamp_turtlesim_vacuum_cleaner-0.0.0-py3.10.egg-info/entry_points.txt
 /home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/python3.10/site-packages/bootcamp_turtlesim_vacuum_cleaner-0.0.0-py3.10.egg-info/requires.txt
-/home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/bootcamp_turtlesim_vacuum_cleaner/vacuum_cleaner
+/home/jimmy/ros2_ws/src/install/bootcamp_turtlesim_vacuum_cleaner/lib/bootcamp_turtlesim_vacuum_cleaner/vacuum_cleaner_turtlebot

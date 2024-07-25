@@ -1,18 +1,26 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import SetEnvironmentVariable
+from launch.actions import IncludeLaunchDescription, SetEnvironmentVariable
+from launch.actions import IncludeLaunchDescription
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
+    workspace_dir = os.path.expanduser('~/ros2_ws')
+    package_dir = os.path.join(workspace_dir, 'src', 'bootcamp_turtlesim_vacuum_cleaner')
+    rviz_config_path = os.path.join(package_dir, 'rviz', 'turtlebot3_config.rviz')
     # Paths to the RViz configuration and URDF files
-    rviz_config_path = '/home/jimmy/ros2_ws/ROS2-Bootcamp/bootcamp_turtlesim_vacuum_cleaner/rviz/turtlebot3_config.rviz'
+    #rviz_config_path = '/home/jimmy/ros2_ws/ROS2-Bootcamp/bootcamp_turtlesim_vacuum_cleaner/rviz/turtlebot3_config.rviz'
+    #rviz_config_path = '/home/jimmy/ros2_ws/src/bootcamp_turtlesim_vacuum_cleaner/rviz/turtlebot3_config.rviz'
     urdf_file_name = 'turtlebot3_burger.urdf'
     urdf_path = os.path.join(get_package_share_directory('turtlebot3_description'), 'urdf', urdf_file_name)
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
+    print(f"RViz config path: {rviz_config_path}")
 
     # Read URDF file content
+
     with open(urdf_path, 'r') as urdf_file:
         robot_description = urdf_file.read()
 

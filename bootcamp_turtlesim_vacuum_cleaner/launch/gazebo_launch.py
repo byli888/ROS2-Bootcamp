@@ -1,18 +1,21 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, SetEnvironmentVariable
+from launch.actions import IncludeLaunchDescription, SetEnvironmentVariable, LogInfo
 from launch.substitutions import LaunchConfiguration
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 
 def generate_launch_description():
     package_dir = get_package_share_directory('bootcamp_turtlesim_vacuum_cleaner')
-    #world_path = os.path.join(package_dir, 'worlds', 'vacuum_world.sdf')
-    world_path = '/home/jimmy/ros2_ws/ROS2-Bootcamp/bootcamp_turtlesim_vacuum_cleaner/worlds/vacuum_world.sdf'
+    world_path = '/home/jimmy/ros2_ws/src/bootcamp_turtlesim_vacuum_cleaner/worlds/vacuum_world.sdf'
     turtlebot3_model_path = '/opt/ros/humble/share/turtlebot3_gazebo/models'
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
 
+    # Print statements
+    print(f'Package directory: {package_dir}')
+    print(f'World path: {world_path}')
+    print(f'Turtlebot3 model path: {turtlebot3_model_path}')
     return LaunchDescription([
         SetEnvironmentVariable('TURTLEBOT3_MODEL', 'burger'),
         SetEnvironmentVariable('GAZEBO_MODEL_PATH', f"{turtlebot3_model_path}:${{GAZEBO_MODEL_PATH}}"),
@@ -22,13 +25,12 @@ def generate_launch_description():
             )]),
             launch_arguments={'world': world_path}.items(),
         ),
-                # Include the Gazebo client launch file
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([os.path.join(
                 get_package_share_directory('gazebo_ros'), 'launch', 'gzclient.launch.py'
             )])
         ),
-         Node(
+        Node(
             package='gazebo_ros',
             executable='spawn_entity.py',
             arguments=[

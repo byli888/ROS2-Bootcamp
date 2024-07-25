@@ -1,3 +1,0 @@
-[console_scripts]
-move_turtle = bootcamp_turtle_mover.move_turtle:main
-

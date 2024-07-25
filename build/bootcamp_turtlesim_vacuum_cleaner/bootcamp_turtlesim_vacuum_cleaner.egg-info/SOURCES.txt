@@ -11,6 +11,11 @@ setup.py
 ../build/bootcamp_turtlesim_vacuum_cleaner/bootcamp_turtlesim_vacuum_cleaner.egg-info/zip-safe
 bootcamp_turtlesim_vacuum_cleaner/__init__.py
 bootcamp_turtlesim_vacuum_cleaner/vacuum_cleaner.py
+bootcamp_turtlesim_vacuum_cleaner/vacuum_cleaner_turtlebot.py
+launch/2.py
+launch/combined_launch.py
+launch/gazebo_launch.py
+launch/rviz_launch.py
 resource/bootcamp_turtlesim_vacuum_cleaner
 test/test_copyright.py
 test/test_flake8.py
